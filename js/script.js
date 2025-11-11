@@ -50,3 +50,8 @@ btnAgregarEmoji.addEventListener("click", ()=>{
     if(emoji) cielo.innerHTML += emoji;
     inputEmoji.value="";
 })
+
+inputEmoji.addEventListener("keydown", e=>{
+    if(e.key==="Escape") cielo.innerHTML="";
+})
+
