@@ -29,8 +29,24 @@ do{
 
 }while( m < 4)
 
+    //eventos
+
 const btnEstrella = document.getElementById("btnEstrella");
 
 btnEstrella.addEventListener("click", ()=>{
     cielo.innerHTML += "⭐";
+})
+
+const btnPlaneta= document.getElementById("btnPlaneta");
+
+btnPlaneta.addEventListener("dblclick",()=>{
+    cielo.innerHTML +="🪐";
+})
+
+const inputEmoji = document.getElementById("inputEmoji");
+
+btnAgregarEmoji.addEventListener("click", ()=>{
+    var emoji = inputEmoji.value.trim();
+    if(emoji) cielo.innerHTML += emoji;
+    inputEmoji.value="";
 })
