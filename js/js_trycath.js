@@ -1,0 +1,20 @@
+const form = document.getElementById("form");
+const input = document.getElementById("nombre");
+const msg = document.getElementById("mensaje");
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    try{
+        if(input.value.trim()===""){
+            throw new Error("El nombre no puede estar vacio");
+        }
+        msg.textContent=`Bienvenido usuario: ${input.value} a tu sistema de inscripciones`
+        msg.style.color="green";
+    }catch(error){
+        msg.textContent = `Ocurrio un error:${error.massage}`;
+        msg.style.color = "red";
+
+    }
+
+}
+);

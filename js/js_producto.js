@@ -1,7 +1,7 @@
 //componentes mejorados
 
 const productos = [
-    {nombre:"pizza", precio:20,img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI0-HmskFIOzX-o3_DTZdgLshMNluWvZpwAw&s"},
+    {nombre:"pizza", precio:100,img:"https://assets.surlatable.com/m/15a89c2d9c6c1345/72_dpi_webp-REC-283110_Pizza.jpg"},
     {nombre:"refresco", precio:40, img:"https://carnemart.com/wp-content/uploads/2025/10/wp-image-5046.jpg"}
 ];
 
@@ -9,7 +9,7 @@ const contenedor = document.getElementById("contenedor");
 
 productos.forEach( prod =>{
     const card = document.createElement("div");
-    card.className="card";
+    card.className= "card";
 
     card.innerHTML = `
         <img src="${prod}" alt="${prod.nombre}">
@@ -19,4 +19,5 @@ productos.forEach( prod =>{
     `;
 
     contenedor.appendChild(card)
+
 });
